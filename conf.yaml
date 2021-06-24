@@ -1,8 +1,17 @@
 # 删除备份文件! 数据无价, 请谨慎配置!
 
-# 多线程, 以下情况不建议使用多线程: CPU 双核及以下; 机器IO或内存性能不高; 系统负载很高并有重要业务!
-ThreadPools: 0
+# 线程数量
+ThreadPools: 1
+
+
 
 confing:
+
+# path 指定删除路径, 删除这个path目录下, 编辑超过 keepTime天数的文件或者目录!
+# keepTime 不删除指定天数内编辑过的文件或者目录, 默认为200天
 - path: F:\20210601
   keepTime: 1
+- path: F:\allen
+  keepTime: 1
+- path: F:\allen
+
