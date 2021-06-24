@@ -69,7 +69,7 @@ func main() {
 	jobs := make(chan string)
 
 	wg := sync.WaitGroup{}
-	// 开通三个线程池，执行消费jobs通道内容
+	// 开通线程池，执行消费jobs管道
 	if settings.Conf.ThreadPools > 1 {
 		settings.Conf.ThreadPools = 1
 	}
